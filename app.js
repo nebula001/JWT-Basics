@@ -9,14 +9,6 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static("./public"));
 
-// app.get("/", (req, res) => {
-//   res
-//     .status(200)
-//     .send(
-//       `<h1><a href = "/api/v1/login">Click Here to go to login page</a></h1>`
-//     );
-// });
-
 app.use("/api/v1", routerApp);
 
 app.use(notFoundMiddleware);
